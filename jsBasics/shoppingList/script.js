@@ -13,29 +13,27 @@ outputs:
 */
 
 function addShoppingListItem () {
-    const listInput = document.querySelector("#listInput").value;
+    const input = document.querySelector("#listInput")
+    const listInput = input.value;
+    input.value = "";
+    input.focus();
 
-    if(listInput == " ") {
-        alert("ERROR: Empty input");
-    } else {
-        const liElement = document.createElement("li");
-        const deleteBtn = document.createElement("button");
-    
-        deleteBtn.textContent = "Delete";
-        liElement.textContent = listInput + " ";
-        liElement.classList.add(listInput);
-    
-        deleteBtn.addEventListener("click", deleteShoppingListItem, false);
-    
-        liElement.appendChild(deleteBtn);
-        shoppingList.appendChild(liElement);
-    }
+    const liElement = document.createElement("li");
+    const deleteBtn = document.createElement("button");
+
+    deleteBtn.textContent = "Delete";
+    liElement.textContent = listInput + " ";
+    liElement.classList.add(listInput);
+
+    deleteBtn.addEventListener("click", deleteShoppingListItem, false);
+
+    liElement.appendChild(deleteBtn);
+    shoppingList.appendChild(liElement);
 }
 
 function deleteShoppingListItem (e) {
-    console.log(e.target.getAttribute("class"));
-    console.log(e.target);
-    shoppingList.removeChild(e.target.getAttribute("class"));
+    e.target.removeEventListener("click", deleteShoppingListItem, false);
+    shoppingList.removeChild(e.target.parentNode);
 }
 
 //Selected Elements
