@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+    
+    <script>
+        const warplane = {
+            model: "CSS-4",
+            ammunition: {
+                primary: "Tracer", 
+                secondary: "Armor Penetration",
+            },
+            supplies() {
+                console.log(`${this.model} has ${this.ammunition.primary} and ${this.ammunition.secondary} ammo`);
+            },
+            shoot(ammo) {
+                console.log(`${this.model} fighter has shoot a ${this.ammunition[ammo]} round!`);
+            },
+        };
+
+        function Tank(model) {
+            this.model = model;
+            this.ammunition = {
+                primary: "Hight Explosive", 
+                secondary: "Armor Penetration",
+            };
+            this.supplies = function () {
+                console.log(`${this.model} has ${this.ammunition.primary} and ${this.ammunition.secondary} ammo`);
+            };
+            this.shoot = function (ammo) {
+                console.log(`${this.model} tank has shoot a ${this.ammunition[ammo]} round!`);
+            };
+        }
+
+        const myNotification = new Notification("Hello!");
+    </script>
+  </body>
+
+</html>

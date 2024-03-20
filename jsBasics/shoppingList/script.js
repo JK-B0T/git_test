@@ -42,3 +42,5 @@ const shoppingList = document.querySelector("#shoppingList");
 
 //Event Listeners
 addItemBtn.addEventListener("click", addShoppingListItem, false);
+
+
