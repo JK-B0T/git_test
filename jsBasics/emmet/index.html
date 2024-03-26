@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet</title>
+</head>
+<body>
+    ul>li+li
+    <ul>
+        <li></li>
+        <li><span></span></li>
+    </ul>
+
+    nav>ul.nav>li.nav-item$*>a
+    <section>
+        <h1></h1>
+        <ol id="panList">
+            <li>
+                <img src="" alt="">
+                <p>pan</p>
+            </li>
+            <li>
+                <img src="" alt="">
+                <p>pan2</p>
+            </li>
+            <li>
+                <img src="" alt="">
+                <p>pan3</p>
+            </li>
+            <li>
+                <img src="" alt="">
+                <p>pan4</p>
+            </li>
+        </ol>
+    </section>
+     
+    
+
+    ul.nav>li.nav-item$*>a|t
+    <ul>
+        <li>popo</li>
+        <li>papa</li>
+        <li>pepe</li>
+        <li>pipi</li>
+        <li>pupu</li>
+    </ul>
+
+    ul>li[title=$#]*>{cute $#}+img[alt=cute_$#]
+        <ul>
+            <li title="cat">
+                cute cat
+                <img src="" alt="cute_cat">
+            </li>
+            <li title="dog">
+                cute dog
+                <img src="" alt="cute_dog">
+            </li>
+            <li title="bird">
+                cute bird
+                <img src="" alt="cute_bird">
+            </li>
+            <li title="fish">
+                cute fish
+                <img src="" alt="cute_fish">
+            </li>
+        </ul>
+</body>
+</html>
