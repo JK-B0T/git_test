@@ -1,0 +1,32 @@
+form {
+    border: 2px solid lightgrey;
+    border-radius: 16px;
+    width: 60vw;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+input:not([type="radio"]), textarea, button, select{
+    margin: 2% 0;
+    vertical-align: middle;
+}
+input:not([type="radio"]), textarea, select{
+    width: 300px;
+    
+}
+textarea {
+    vertical-align: text-top;
+}
+button {
+    margin-left: 90px;
+}
+label:not(input + label) {
+    display: inline-block;
+    min-width: 90px;
+    text-align: right;
+  }
+
+li, ul {
+    list-style: none;
+    padding-left: 0;
+}
