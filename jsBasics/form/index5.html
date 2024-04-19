@@ -7,22 +7,22 @@
     <title>Form 5</title>
 </head>
 <body>
-    <div id="titleContainer">
+    <header class="speaker-form-header">
         <h1>Speaker Submission</h1>
-        <p>Want to speak at our fake conference? Fill out this form</p>
-    </div>
+        <p><em>Want to speak at our fake conference? Fill out this form</em></p>
+    </header>
 
-    <form action="" method="get">
+    <form action="" method="get" class="speaker-form">
         <ul>
-            <li>
+            <li class="form-row">
                 <label for="name">Name</label>
                 <input type="text" id="name">
             </li>
-            <li>
+            <li class="form-row">
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="you@example.com">
             </li>
-            <li>
+            <li class="form-row">
                 <fieldset>
                     <legend>Type of Talk</legend>
 
@@ -32,7 +32,7 @@
                     <label for="workshop">Workshop</label>
                 </fieldset>
             </li>
-            <li>
+            <li class="form-row">
                 <label for="shirtSize">T-Shirt Size</label>
                 <select id="shirtSize">
                     <option>
@@ -52,17 +52,17 @@
                     </option>
                 </select>
             </li>
-            <li>
+            <li class="form-row">
                 <label>Abstract</label>
                 <textarea></textarea>
                 <span>Describe your talk in 500 words or less</span>
             </li>
-            <li>
+            <li class="form-row">
                 <input type="checkbox" id="availabilityCheck">
                 <label for="availabilityCheck">I'm actually available the date of the talk</label>
 
             </li>
-            <li>
+            <li class="form-row">
                 <button type="submit">Submit</button>
             </li>
         </ul>

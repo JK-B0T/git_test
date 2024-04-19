@@ -5,6 +5,7 @@
 }
 
 body{
+    color: #5D6063;
     background-color: lavender;
     text-align: center;
     font-family: "Helvetica", "Arial", sans-serif;
@@ -16,20 +17,27 @@ input, select, textarea {
     appearance: none;
 }
 
-#titleContainer, form {
+.speaker-form-header {
     display: block;
-    width: 80vw;
-    margin: 4% auto 0;
+    width: 80%;
+    margin: 40px auto;
+    padding: 50px;
     background-color: #F6F7F8;
     border: 2px solid lightgrey;
     border-radius: 5px;
-} 
-#titleContainer {
-    padding: 3%;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
-#titleContainer > h1 {
-    margin-bottom: 1%;
-}
+
+.speaker-form {
+    background-color: #F6F7F8;
+    border: 2px solid lightgrey;
+    border-radius: 3px;
+    
+    width: 80%;
+    padding: 50px;
+    margin: 0 auto 40px auto;
+  }
 
 fieldset {
     position: relative;
@@ -41,10 +49,15 @@ legend {
 
 }
 
-li{
+.form-row{
     list-style: none;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
-li > * {
+.form-row > * {
     margin: 1.5% 1%;
 }
 
@@ -56,3 +69,16 @@ textarea {
     border: 2px solid lightgrey;
     border-radius: 4px;
 }
+
+.form-row input[type='text'] {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+  }
+
+  .form-row label {
+    margin-bottom: 15px;
+  }
