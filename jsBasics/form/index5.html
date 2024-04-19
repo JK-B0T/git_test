@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style5.css">
+    <title>Form 5</title>
+</head>
+<body>
+    <div id="titleContainer">
+        <h1>Speaker Submission</h1>
+        <p>Want to speak at our fake conference? Fill out this form</p>
+    </div>
+
+    <form action="" method="get">
+        <ul>
+            <li>
+                <label for="name">Name</label>
+                <input type="text" id="name">
+            </li>
+            <li>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="you@example.com">
+            </li>
+            <li>
+                <fieldset>
+                    <legend>Type of Talk</legend>
+
+                    <input type="radio" id="mainStage">
+                    <label for="mainStage">Main Stage</label>
+                    <input type="radio" id="workshop">
+                    <label for="workshop">Workshop</label>
+                </fieldset>
+            </li>
+            <li>
+                <label for="shirtSize">T-Shirt Size</label>
+                <select id="shirtSize">
+                    <option>
+                        Extra small
+                    </option>
+                    <option>
+                        Small
+                    </option>
+                    <option>
+                        Medium
+                    </option>
+                    <option>
+                        Big
+                    </option>
+                    <option>
+                        Extra Big
+                    </option>
+                </select>
+            </li>
+            <li>
+                <label>Abstract</label>
+                <textarea></textarea>
+                <span>Describe your talk in 500 words or less</span>
+            </li>
+            <li>
+                <input type="checkbox" id="availabilityCheck">
+                <label for="availabilityCheck">I'm actually available the date of the talk</label>
+
+            </li>
+            <li>
+                <button type="submit">Submit</button>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
