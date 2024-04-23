@@ -23,44 +23,35 @@
                 <input type="email" id="email" placeholder="you@example.com">
             </li>
             <li class="form-row">
-                <fieldset>
+                <fieldset class='legacy-form-row'>
                     <legend>Type of Talk</legend>
 
-                    <input type="radio" id="mainStage">
-                    <label for="mainStage">Main Stage</label>
-                    <input type="radio" id="workshop">
-                    <label for="workshop">Workshop</label>
+                    <input type="radio" id="mainStage" name="talkType" value='mainStage'>
+                    <label for="mainStage" class='radio-label'>Main Stage</label>
+                    <input type="radio" id="workshop" name="talkType" value='workshop' checked>
+                    <label for="workshop" class='radio-label'>Workshop</label>
                 </fieldset>
             </li>
             <li class="form-row">
                 <label for="shirtSize">T-Shirt Size</label>
-                <select id="shirtSize">
-                    <option>
-                        Extra small
-                    </option>
-                    <option>
-                        Small
-                    </option>
-                    <option>
-                        Medium
-                    </option>
-                    <option>
-                        Big
-                    </option>
-                    <option>
-                        Extra Big
-                    </option>
+                <select id="shirtSize" name="shirtSize">
+                    <option value="xs">Extra small</option>
+                    <option value="s">Small</option>
+                    <option value="m">Medium</option>
+                    <option value="l">Big</option>
+                    <option value="xl">Extra Big</option>
                 </select>
             </li>
             <li class="form-row">
-                <label>Abstract</label>
-                <textarea></textarea>
-                <span>Describe your talk in 500 words or less</span>
+                <label for="abstract">Abstract</label>
+                <textarea id='abstract'></textarea>
+                <span class='instructions'>Describe your talk in 500 words or less</span>
             </li>
             <li class="form-row">
-                <input type="checkbox" id="availabilityCheck">
-                <label for="availabilityCheck">I'm actually available the date of the talk</label>
-
+                <label for="availabilityCheck" class="checkbox-label">
+                    <input type="checkbox" id="availabilityCheck">
+                    <span>I'm actually available the date of the talk</span>
+                </label>
             </li>
             <li class="form-row">
                 <button type="submit">Submit</button>
