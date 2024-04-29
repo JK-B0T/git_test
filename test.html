@@ -6,7 +6,18 @@
     <title>Test</title>
 
     <script defer>
+      function Book (title = "unknown", author = "anonymus", pages = null, read = false) {
+        this.title = title;
+        this.autor = author;
+        this.pages = pages;
+        this.read = read;
+        this.info = function () {
+          return `${title} by ${author}, ${pages} pages, readed: ${read}`
+        }
+      }
 
+      const elJobas = new Book ("El Jobas", "Poplio", 1247, true);
+      console.log(elJobas.info());
     </script>
 
     <style>
