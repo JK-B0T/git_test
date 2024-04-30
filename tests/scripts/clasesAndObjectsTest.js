@@ -50,20 +50,50 @@ let creature = {
     },
 }
 
+let colony = {
+    resources: [],
+    storeResource (resource) {
+        this.resources = [resource];
+    },
+    __proto__: creature,
+}
+console.log("---antColonies prototypes---");
+let antColony4 = new AntColonyConstructor (4);
+Object.setPrototypeOf(antColony4, colony);
+
 console.log("2. antColony2 prototype:", Object.getPrototypeOf(antColony2));
-console.log("1. AntColonyConstructor prototype:", Object.getPrototypeOf(antColony2.__proto__));
+console.log("1. antColony2 prototype prototype:", Object.getPrototypeOf(antColony2.__proto__));
 console.log("0. Object prototype:", Object.getPrototypeOf(antColony2.__proto__.__proto__));
 
-Object.setPrototypeOf(antColony2, creature);
-console.log("antColony2 prototype changed to creature:", Object.getPrototypeOf(antColony2));
+console.log("3. antColony4 prototype:", Object.getPrototypeOf(antColony4));
+console.log("2. antColony4 prototype prototype:", Object.getPrototypeOf(antColony4.__proto__));
+console.log("1. antColony4 prototype prototype prototype:", Object.getPrototypeOf(antColony4.__proto__.__proto__));
+console.log("0. Object prototype:", Object.getPrototypeOf(antColony4.__proto__.__proto__.__proto__));
 
-let antColony4 = new AntColonyConstructor (4);
-Object.setPrototypeOf(antColony4, creature);
+Object.setPrototypeOf(antColony2, colony);
+console.log("antColony2 prototype changed to colony:", Object.getPrototypeOf(antColony2));
+
+console.log("---antColonies inherited 'isDead' property---");
 antColony4.killCreature();
+console.log("antColony2:",antColony2.isDead);
+console.log("antColony3:",antColony3.isDead);
+console.log("antColony4:",antColony4.isDead);
 
-console.log("antColony2 inherited 'isDead' property:", antColony2.isDead, Object.getPrototypeOf(antColony2));
-console.log("antColony3 inherited 'isDead' property:", antColony3.isDead, Object.getPrototypeOf(antColony3));
-console.log("antColony4 inherited 'isDead' property:", antColony4.isDead, Object.getPrototypeOf(antColony4));
+console.log("---antColonies inherited 'resources' property with a pushed element---");
+antColony2.resources.push("gravel");
+console.log("antColony2:",antColony2.resources);
+console.log("antColony4:",antColony4.resources);
+
+console.log("---antColonies inherited 'resources' property with an added element---");
+antColony2.storeResource("leafs");
+console.log("antColony2:",antColony2.resources);
+console.log("antColony4:",antColony4.resources);
+
+/*If you assing a prototype like PrototypeA = PrototypeB, 
+you will be replacing the methods of the prototype to all sub prototypes.
+with Object.setPrototypeof() every subprototype makes a copy, so yo can edit
+the methods of a sub prototype without editing it for the others,
+but use this method before creating any objects*/
 
 //--------------------Class--------------------
 console.log("--------------------Class--------------------");
