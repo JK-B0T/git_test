@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    appearance: none;
+}
+
+.mainContainer {
+    display: grid;
+    grid-template: 5rem 3rem 1fr / repeat(3, 1fr);
+    height: 100vh;
+    text-align: center;
+}
+
+.mainContainer > div {
+    border: 2px solid pink;
+    background-color: antiquewhite;
+}
+
+.mainContainer > div:nth-child(1) {
+    grid-column: 1 / 4;
+}
